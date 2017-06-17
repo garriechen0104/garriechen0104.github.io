@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="./css/index1.css" rel="stylesheet">
+    <link href="./js/index.js" rel="stylesheet">
 
     <style>
       .jumbotron{
@@ -47,7 +48,7 @@ body {
   padding-top: 2rem;
 }
 .footer {
-  text-align: center;
+  
 }
 .item{
     margin-top: 5px;
@@ -342,10 +343,96 @@ function myFunction1() {
 </div>
 </div>
 
-      <hr>
+    
+        <div>
+            <p style="color: darkcyan">Game Time</p>
+            <div class="form-group row" style="color: lightcoral">
+                <label for="example-number-input" class="col-2 col-form-label">請輸入數字a</label>
+                <div class="col-10"  >
+                    <input class="form-control" type="number" value="0" id="a" style="box-shadow: inset -2px -4px 9px 1px rgba(10, 10, 10, 0.57)">
+                </div>
+            </div>
+            <div class="form-group row" style="color: lightpink">
+                <label for="example-number-input" class="col-2 col-form-label">請輸入數字b</label>
+                <div class="col-10" >
+                    <input class="form-control" type="number" value="0" id="b" style="box-shadow: inset -2px -4px 9px 1px rgba(10, 10, 10, 0.57)">
+                </div>
+            </div>
+            <div class="form-group row" style="color: #ec971f">
+                <label for="example-number-input" class="col-2 col-form-label">請輸入數字c</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" value="0" id="c" style="box-shadow: inset -2px -4px 9px 1px rgba(10, 10, 10, 0.57)">
+                </div>
+            </div>
+            <div class="form-group row" style="color: hotpink">
+                <label for="example-number-input" class="col-2 col-form-label">請輸入數字d</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" value="2" id="d" style="box-shadow: inset -2px -4px 9px 1px rgba(10, 10, 10, 0.57)">
+                </div>
+            </div>
+             </div>
+            
+
+            <button type="button" class="btn btn-primary"style="margin-top: 7px;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: lightpink;
+    background-color: #4306e0;
+    border-color: darkcyan;
+    border-radius: 7rem;
+    box-shadow: inset -2px -4px 9px 1px rgba(10, 10, 10, 0.57);>
+    NUMBER
+    </button>
+           
+    
+
+            <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">猜出關係了嗎?多試幾次就知道囉!</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" id="result">
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.2.1.js"></script>
+    <script src="./js/index.js"></script>
+    <script language="JavaScript">
+        $('button').on('click', function() {
+            var o = $('#a').val()
+            var b = $('#b').val()
+            var c = $('#c').val()
+            var d = $('#d').val()
+            var f = $('#composition').val()
+            o = Number(o)
+            b = Number(b)
+            c = Number(c)
+            d = Number(d)
+            f = Number(f)
+            dd = d / 2
+            score = -o + b + c + dd
+            $('#result').val(score)
+        })
+    </script>
+
+        </div>
+          <hr>
 <div class="footer">
       <footer>
+         <p>溫馨提示：先輸入一數，將其餘三數設成0會更快優</p>
         <p>I am the future once-- adapted from David Cameron</p>
+         
+      
+    <hr>
       </footer>
     </div> <!-- /container -->
 
@@ -361,4 +448,3 @@ function myFunction1() {
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
-
